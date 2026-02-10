@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/_2sdp"
+    app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/_6sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/verse_selector"
+            android:padding="@dimen/_6sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvVerseNo"
+                    android:layout_width="@dimen/_230sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_shimmer"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/orange"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVerseContent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:textStyle="normal"
+                android:maxLines="4"
+                android:background="@drawable/bg_shimmer"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_72sdp"
+            android:src="@drawable/verse_top_right"
+            android:alpha="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_72sdp"
+            android:src="@drawable/verse_bottom_left"
+            android:alpha="0.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

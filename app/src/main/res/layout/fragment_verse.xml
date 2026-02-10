@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.VerseFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/clGita">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_back"
+                android:id="@+id/ivBack"
+                android:tint="@color/black"
+                android:layout_marginEnd="@dimen/_20sdp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/kalash"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shree_bhagavad_gita"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/kalash"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clGita">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChapterNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chapter 1"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChapterTitle"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Arjun Visada Yoga"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_18sdp"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChapterDescription"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:text="The first chapter of the Bhagavad Gita - Arjuna Vishada Yoga introduces the setup, the setting, the characters and the circumstances that led to the epic battle of Mahabharata, fought between the Pandavas and the Kauravas. It outlines the reasons that led to the revelation of the of Bhagavad Gita. As both armies stand ready for the battle, the mighty warrior Arjuna, on observing the warriors on both sides becomes increasingly sad and depressed due to the fear of losing his relatives and friends and the consequent sins attributed to killing his own relatives. So, he surrenders to Lord Krishna, seeking a solution. Thus, follows the wisdom of the Bhagavad Gita."
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="start"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReadMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/read_more"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:textColor="#2196F3"
+             android:textStyle="normal"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="start"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVerseCount"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVerseTitle"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Verse"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvShowingInternet"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_internet_connection_n_check_for_saved_chapters_in_settings"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/llTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:padding="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_verse"/>
+
+                <include layout="@layout/shimmer_verse"/>
+
+                <include layout="@layout/shimmer_verse"/>
+
+                <include layout="@layout/shimmer_verse"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRecyclerVerse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_verse"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:layout_width="@dimen/_220sdp"-->
+<!--        android:layout_height="@dimen/_220sdp"-->
+<!--        android:src="@drawable/krsna"-->
+<!--        android:alpha="0.15"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/llBottom"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

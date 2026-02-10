@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.VerseDetailsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/idLinerTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/clGita">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_48sdp"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_back"
+                            android:id="@+id/ivBack"
+                            android:tint="@color/black"
+                            android:layout_marginEnd="@dimen/_20sdp"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/kalash"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shree_bhagavad_gita"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:layout_gravity="center"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/kalash"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    app:indicatorColor="@color/orange"
+                    app:trackColor="#F8D6C9"
+                    android:id="@+id/idProgress"
+                    android:visibility="visible"
+                    android:indeterminateTint="@color/orange"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvVerseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="||1.2||"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_8sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvVerses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="श्री भगवानुवाच लोकेऽस्मिन्द्विविधा निष्ठा पुरा प्रोक्ता मयानघ। ज्ञानयोगेन सांख्यानां कर्मयोगेन योगिनाम्"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_16sdp"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_8sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTransliteration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="śhrī bhagavān uvācha loke’smin dvi-vidhā niṣhṭhā purā proktā mayānagha jñāna-yogena sāṅkhyānāṁ karma-yogena yoginām"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_8sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvWordMeaning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:text="śhrī-bhagavān uvācha—the Blessed Lord said; loke—in the world; asmin—this; dvi-vidhā—two kinds of; niṣhṭhā—faith; purā—previously; proktā—explained; mayā—by me (Shree Krishna); anagha—sinless; jñāna-yogena—through the path of knowledge; sānkhyānām—for those inclined toward contemplation; karma-yogena—through the path of action; yoginām—of the yogis"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    tools:ignore="TextSizeCheck" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:visibility="visible"
+                    android:src="@drawable/divider"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/idLinerBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idLinerTop">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:visibility="visible"
+                    android:text="@string/translation"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_3sdp"
+                    android:textSize="@dimen/_18sdp"
+                    android:textColor="@color/black"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/idClTranslation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/LinerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:background="@drawable/bg_verse_card"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_6sdp"
+                            android:paddingVertical="@dimen/_6sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/author"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sdp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAuthorName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/_6sdp"
+                                android:text="Swami Ramsukhdas"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTranslation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_6sdp"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:text="The Blessed Lord said, In this world, there is a twofold path, as I said before, O sinless one: the path of knowledge of the Sankhyas and the path of action of the Yogins."
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="normal"
+                            tools:ignore="TextSizeCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/idFabRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_double_arrow_right"
+                        android:tint="@color/white"
+                        android:visibility="visible"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/LinerLayout"
+                        app:layout_constraintBottom_toBottomOf="@+id/LinerLayout"
+                        app:layout_constraintEnd_toEndOf="@+id/LinerLayout"/>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/idFabLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_double_arrow_left"
+                        android:tint="@color/white"
+                        android:visibility="gone"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/LinerLayout"
+                        app:layout_constraintBottom_toBottomOf="@+id/LinerLayout"
+                        app:layout_constraintStart_toStartOf="@+id/LinerLayout"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/commentary"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    android:padding="@dimen/_3sdp"
+                    android:textSize="@dimen/_18sdp"
+                    android:textColor="@color/black"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/idClCommentary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:paddingHorizontal="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/idLinerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_verse_card"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_6sdp"
+                            android:paddingVertical="@dimen/_6sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/author"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sdp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAuthorTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/_6sdp"
+                                android:text="Swami Ramsukhdas"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCommentary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_6sdp"
+                            android:maxLines="4"
+                            android:ellipsize="end"
+                            android:text="कर्मेन्द्रियाणि organs of action? संयम्य restraining? यः who? आस्ते sits? मनसा by the mind? स्मरन् remembering? इन्द्रियार्थान् senseobjects? विमूढात्मा of deluded understanding? मिथ्याचारः hypocrite? सः he? उच्यते is called.Commentary The five organs of action? Karma Indriyas? are Vak (organ of speech)? Pani (hands)? Padam (feet)? Upastha (genitals) and Guda (anus). They are born of the Rajasicportion of the five Tanmatras or subtle elements Vak from the Akasa Tanmatra (ether)? Pani from the Vayu Tanmatra (air)? Padam from the Agni Tanmatra (fire)? Upastha from the Apas Tanmatra (water)? and Guda from the Prithivi Tanmatra (earth). That man who? restraining the organs of action? sits revolving in his mind thoughts regarding the objects of the senses is a man of sinful conduct. He is selfdeluded.He is a veritable hypocrite.The organs of action must be controlled. The thoughts should also be controlled. The mind should be firmly fixed on the Lord. Only then will you become a true Yogi. Only then will you attain to Selfrealisation."
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="normal"
+                            tools:ignore="TextSizeCheck" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSeeMore"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_6sdp"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:maxLines="4"
+                            android:ellipsize="end"
+                            android:text="@string/read_more"
+                            android:textColor="#2196F3"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="normal"
+                            tools:ignore="TextSizeCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/idFabCommentaryRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_double_arrow_right"
+                        android:tint="@color/white"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/idLinerLayout"
+                        app:layout_constraintBottom_toBottomOf="@+id/idLinerLayout"
+                        app:layout_constraintEnd_toEndOf="@+id/idLinerLayout"/>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/idFabCommentaryLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_double_arrow_left"
+                        android:tint="@color/white"
+                        android:visibility="gone"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/idLinerLayout"
+                        app:layout_constraintBottom_toBottomOf="@+id/idLinerLayout"
+                        app:layout_constraintStart_toStartOf="@+id/idLinerLayout"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivNoInternet"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/no_internet"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShowingInternet"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_internet_connection_n_check_for_saved_chapters_in_settings"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivNoInternet"
+                android:gravity="center"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_220sdp"
+        android:src="@drawable/krsna"
+        android:alpha="0.2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

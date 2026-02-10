@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Shree Bhagavad Gita</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chapters">Chapters</string>
+    <string name="no_internet_connection_n_check_for_saved_chapters_in_settings">No Internet connection! \n Check for Saved chapters in settings</string>
+    <string name="shree_bhagavad_gita">Shree Bhagavad Gita</string>
+    <string name="read_more">Read More…</string>
+    <string name="chapter">Chapter %1$s</string>
+    <string name="read_less">Read Less…</string>
+    <string name="translation">Translations</string>
+    <string name="author">Author:</string>
+    <string name="commentary">Commentary</string>
+    <string name="saved_chapters">Saved Chapters</string>
+    <string name="saved_verses">Saved Verses</string>
+    <string name="no_saved_chapters">No Saved Chapters</string>
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.shreebhagavatgita.view.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.shreebhagavatgita.view.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_verseFragment"
+            app:destination="@id/verseFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verseFragment"
+        android:name="com.example.shreebhagavatgita.view.fragments.VerseFragment"
+        android:label="fragment_verse"
+        tools:layout="@layout/fragment_verse" >
+        <action
+            android:id="@+id/action_verseFragment_to_verseDetailsFragment"
+            app:destination="@id/verseDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verseDetailsFragment"
+        android:name="com.example.shreebhagavatgita.view.fragments.VerseDetailsFragment"
+        android:label="fragment_verse_details"
+        tools:layout="@layout/fragment_verse_details" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.shreebhagavatgita.view.fragments.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_saveChapterFragment"
+            app:destination="@id/saveChapterFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_saveVersaFragment"
+            app:destination="@id/saveVersaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveChapterFragment"
+        android:name="com.example.shreebhagavatgita.view.fragments.SaveChapterFragment"
+        android:label="fragment_save_chapter"
+        tools:layout="@layout/fragment_save_chapter" >
+        <action
+            android:id="@+id/action_saveChapterFragment_to_verseFragment"
+            app:destination="@id/verseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveVersaFragment"
+        android:name="com.example.shreebhagavatgita.view.fragments.SaveVersaFragment"
+        android:label="fragment_save_versa"
+        tools:layout="@layout/fragment_save_versa" >
+        <action
+            android:id="@+id/action_saveVersaFragment_to_verseDetailsFragment"
+            app:destination="@id/verseDetailsFragment" />
+    </fragment>
+</navigation>

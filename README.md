@@ -2,8 +2,8 @@
 
 An Android application built with Kotlin that brings the timeless wisdom of the Bhagavad Gita to modern mobile devices. This app provides an elegant, user-friendly interface for reading and exploring the sacred text.
 
-## 📸 Screenshots
-*Add your app screenshots here*
+## 📸 APK File
+
 
 ## ✨ Features
 
